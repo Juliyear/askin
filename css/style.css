@@ -1,0 +1,206 @@
+*{
+    padding: 0px;
+    margin: 15px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body, html{
+    height: 100%;
+    margin: 0px;
+}
+
+body{
+  background-color: #950000;
+}
+
+.div-formularios-bg{
+   
+    height: 100%;
+/* 
+    background-image: url(../img/me-aiming.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    background-size: 100% 101%; */
+}
+
+label{
+    font-size: 23px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 1000px;
+    color: #ff9afb;
+}
+
+input[type=submit]{
+  background-color: #823d95;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border-width: 1px;
+    border-color: #650095;
+    color: #fbfbfb;
+    border: 1px solid #8f46bd;
+    margin-top: 11px;
+    margin-bottom: 20px;
+}
+
+input[type=text], input[type=text], select{
+  width: 80%;
+  padding: 8px 13px;
+  text-align: center;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #cccccc1a;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #191c29;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input[type=submit]:hover{
+  cursor: pointer;
+}
+
+form{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.form-container {
+    /* max-width: 400px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    padding: 0px 0px 20px 0px;
+    position: sticky;
+    top: 18%; */
+
+    background: #191c29;
+  width: 400px;
+
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+  }
+  
+  .form-container::before{
+    content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #cc00ff, #ffffff 43%, #8c00ff);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+
+  .form-container::after{
+    position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #cc00ff, #ffffff 43%, #8c00ff);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+.close-popup:hover{
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .popup-content {
+    position: relative;
+    padding: 27px;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  .imgme{
+    max-width: 400px;
+    margin: 0px;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .pinfo{
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #c5c1c9bf;
+  }
+
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }

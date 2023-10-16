@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Juliano Paulo III">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="img/warning.png?v=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,300&display=swap" rel="stylesheet">
+
+        <title>Erro - Identifique-se!</title>
+    </head>
+    <body>
+
+        <div class="div-formularios-bg">
+
+            <!-- FORMULÁRIOS -->
+        <div class="form-container">
+          <img class="imgme" src="img/me-aiming.png" alt="">
+          <p class="pinfo">
+            Este website é destinado a uma pessoa específica. Responda as perguntas abaixo para saber se você é essa tal pessoa 👇🏻
+          </p>
+            <form id="form1" onsubmit="return checkForm1(this);">
+              <label for="nome">Qual é o seu nome?</label>
+              <br>
+              <input type="text" id="nome" required>
+              <br>
+              <input type="submit" value="Enviar">
+            </form>
+          </div>
+          
+          <div class="form-container hidden" id="form2-container">
+            <img class="imgme" src="img/me-aiming.png" alt="">
+          <p class="pinfo">
+            Este website é destinado a uma pessoa específica. Responda as perguntas abaixo para saber se você é essa tal pessoa 👇🏻
+          </p>
+            <form id="form2" onsubmit="return checkForm2(this);">
+              <label for="telefone">Qual é o seu número de telefone? (com o DDD)</label>
+              <br>
+              <input type="text" id="telefone" required>
+              <br>
+              <input type="submit" value="Enviar">
+            </form>
+          </div>
+          
+          <div class="form-container hidden" id="form3-container">
+            <img class="imgme" src="img/me-aiming.png" alt="">
+          <p class="pinfo">
+            Este website é destinado a uma pessoa específica. Responda as perguntas abaixo para saber se você é essa tal pessoa 👇🏻
+          </p>
+            <form id="form3" onsubmit="return checkForm3(this);">
+              <label for="cidade">Qual o nome da cidade que você mora?</label>
+              <br>
+              <input type="text" id="cidade" required>
+              <br>
+              <input type="submit" value="Enviar">
+            </form>
+          </div>
+          
+          <div class="form-container hidden" id="form4-container">
+            <img class="imgme" src="img/me-aiming.png" alt="">
+          <p class="pinfo">
+            Este website é destinado a uma pessoa específica. Responda as perguntas abaixo para saber se você é essa tal pessoa 👇🏻
+          </p>
+            <form id="form4" onsubmit="return checkForm4(this);">
+              <label for="valor">Quantos centavos Juliano pagou pelo geladinho que ele dividiu com o menino na história que ele te contou? (apenas números)</label>
+              <br>
+              <input type="text" id="valor" required>
+              <br>
+              <input type="submit" value="Enviar">
+            </form>
+          </div>
+          
+          <div class="form-container hidden" id="form5-container">
+            <img class="imgme" src="img/me-aiming.png" alt="">
+          <p class="pinfo">
+            Este website é destinado a uma pessoa específica. Responda as perguntas abaixo para saber se você é essa tal pessoa 👇🏻
+          </p>
+            <form id="form5" onsubmit="return checkForm5(this);">
+              <label for="senha">Qual a senha da sua conta no Valorant?</label>
+              <br>
+              <input type="text" id="senha" required>
+              <br>
+              <input type="submit" value="Enviar">
+            </form>
+          </div>
+
+        </div>
+
+        
+          
+          
+
+
+
+
+        <!-- Chamando JS, manter aqui -->
+        <script src="js/script-form1.js"></script>
+    </body>
+</html>
