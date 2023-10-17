@@ -79,45 +79,51 @@
 
 
   function enviarLogParaFormspree(log) {
-    var form = document.createElement('form');
-    form.setAttribute('action', 'https://formspree.io/f/xdoryjdn'); // Substitua com o seu endpoint do Formspree
-    form.setAttribute('method', 'POST');
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://formspree.io/f/xdoryjdn"); // Substitua com o seu endpoint do Formspree
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-    var input = document.createElement('input');
-    input.setAttribute('type', 'hidden');
-    input.setAttribute('name', 'log');
-    input.setAttribute('value', log);
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log("Enviado com sucesso!");
+        } else {
+            console.error("Erro ao enviar:", xhr.statusText);
+        }
+    };
 
-    form.appendChild(input);
-    document.body.appendChild(form);
-    form.submit();
+    xhr.send(JSON.stringify({log: log}));
 }
 
 function checkForm1(form) {
-    var nome = form.querySelector('input[type="text"]').value.toLowerCase();
-    var log = `Log do Formulário 1:\nNome: ${nome}`;
+  event.preventDefault(); // Impede o envio padrão do formulário
+  var nome = form.querySelector('input[type="text"]').value.toLowerCase();
+  var log = `Log do Formulário 1:\nNome: ${nome}`;
 
-    if (nome === "mayara viali de deus") {
-        form.parentElement.classList.add('hidden');
-        form.parentElement.nextElementSibling.classList.remove('hidden');
+  if (nome === "mayara viali de deus") {
+      form.parentElement.classList.add('hidden');
+      form.parentElement.nextElementSibling.classList.remove('hidden');
 
-        // Envia o log para o Formspree
-        enviarLogParaFormspree(log);
-    } else if (nome === "may" || nome === "mamay" || nome === "mayara") {
-        var popup = createPopup1("Existem outras pessoas com esse mesmo nome, poderia especificar um pouco mais?");
-        document.body.appendChild(popup);
-    } else if(nome === "mayara viali"){
-        var popup = createPopup2("Você só vai entrar com o nome completo, macaquinha 🙈");
-        document.body.appendChild(popup);
-    } else {
-        var popup = createPopup("Este lugar não é destinado a você, por favor SAIA IMEDIATAMENTE");
-        document.body.appendChild(popup);
-    }
+      // Envia o log para o Formspree
+      enviarLogParaFormspree(log);
+  } else if (nome === "may" || nome === "mamay" || nome === "mayara") {
+      var popup = createPopup1("Existem outras pessoas com esse mesmo nome, poderia especificar um pouco mais?");
+      document.body.appendChild(popup);
+  } else if(nome === "mayara viali"){
+      var popup = createPopup2("Você só vai entrar com o nome completo, macaquinha 🙈");
+      document.body.appendChild(popup);
+  } else {
+      var popup = createPopup("Este lugar não é destinado a você, por favor SAIA IMEDIATAMENTE");
+      document.body.appendChild(popup);
+  }
 
-    return false;
+  // Adiciona o log local
+  console.log(log);
+
+  return false;
 }
 
 function checkForm2(form) {
+  event.preventDefault(); // Impede o envio padrão do formulário
   var telefone = form.querySelector('input[type="text"]').value;
   var log = `Log do Formulário 2:\nTelefone: ${telefone}`;
 
@@ -132,10 +138,14 @@ function checkForm2(form) {
       document.body.appendChild(popup);
   }
 
+  // Adiciona o log local
+  console.log(log);
+
   return false;
 }
 
 function checkForm3(form) {
+  event.preventDefault(); // Impede o envio padrão do formulário
   var cidade = form.querySelector('input[type="text"]').value.toLowerCase();
   var log = `Log do Formulário 3:\nCidade: ${cidade}`;
 
@@ -150,10 +160,14 @@ function checkForm3(form) {
       document.body.appendChild(popup);
   }
 
+  // Adiciona o log local
+  console.log(log);
+
   return false;
 }
 
 function checkForm4(form) {
+  event.preventDefault(); // Impede o envio padrão do formulário
   var valor = form.querySelector('input[type="text"]').value;
   var log = `Log do Formulário 4:\nValor: ${valor}`;
 
@@ -167,10 +181,15 @@ function checkForm4(form) {
       var popup = createPopup("Sinto muito, mas aparentemente ou você não lembra ou você não é a Mayara Viali de Deus que eu conheço. SAIA");
       document.body.appendChild(popup);
   }
+
+  // Adiciona o log local
+  console.log(log);
+
   return false;
 }
 
 function checkForm5(form) {
+  event.preventDefault(); // Impede o envio padrão do formulário
   var senha = form.querySelector('input[type="text"]').value;
   var log = `Log do Formulário 5:\nSenha: ${senha}`;
 
@@ -186,10 +205,11 @@ function checkForm5(form) {
       document.body.appendChild(popup);
   }
 
+  // Adiciona o log local
+  console.log(log);
+
   return false;
 }
-
-
 
 
 
