@@ -80,7 +80,7 @@ form{
     top: 18%; */
 
     background: #191c29;
-  max-width: 500px;
+  max-width: 400px;
 
   position: relative;
   border-radius: 6px;
@@ -178,7 +178,7 @@ form{
   }
 
   .imgme{
-    max-width: 500px;
+    max-width: 400px;
     margin: 0px;
     border-radius: 5px 5px 0px 0px;
   }
@@ -226,7 +226,7 @@ form{
   .congrats{
     width: 100%;
     height: 100%;
-    background-image: url(../img/eu-tulipa.jpg);
+    /* background-image: url(../img/eu-tulipa.jpg); */
     margin-top: 0px;
     margin-bottom: 0px;
     top: 0px;
@@ -235,8 +235,11 @@ form{
   }
 
   .h1congrats{
-    color: #e05bff;
-    background-color: red;
+    color: #000000;
+    background-color: white;
     max-width: fit-content;
     padding: 10px;
+    position: absolute;
+    left: 10%;
+    right: 10%;
   }
