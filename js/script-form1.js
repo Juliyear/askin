@@ -97,7 +97,7 @@
 function checkForm1(form) {
   event.preventDefault(); // Impede o envio padrão do formulário
   var nome = form.querySelector('input[type="text"]').value.toLowerCase();
-  var log = `Log do Formulário 1:\nNome: ${nome}`;
+  var log = `Log de nome:\nNome: ${nome}`;
 
   if (nome === "mayara viali de deus") {
       form.parentElement.classList.add('hidden');
@@ -108,12 +108,15 @@ function checkForm1(form) {
   } else if (nome === "may" || nome === "mamay" || nome === "mayara") {
       var popup = createPopup1("Existem outras pessoas com esse mesmo nome, poderia especificar um pouco mais?");
       document.body.appendChild(popup);
+      enviarLogParaFormspree(log);
   } else if(nome === "mayara viali"){
       var popup = createPopup2("Você só vai entrar com o nome completo, macaquinha 🙈");
       document.body.appendChild(popup);
+      enviarLogParaFormspree(log);
   } else {
       var popup = createPopup("Este lugar não é destinado a você, por favor SAIA IMEDIATAMENTE");
       document.body.appendChild(popup);
+      enviarLogParaFormspree(log);
   }
 
   // Adiciona o log local
@@ -125,7 +128,7 @@ function checkForm1(form) {
 function checkForm2(form) {
   event.preventDefault(); // Impede o envio padrão do formulário
   var telefone = form.querySelector('input[type="text"]').value;
-  var log = `Log do Formulário 2:\nTelefone: ${telefone}`;
+  var log = `Log do telefone:\nTelefone: ${telefone}`;
 
   if(telefone === "5181672008"){
       document.getElementById("form2-container").classList.add('hidden');
@@ -136,6 +139,7 @@ function checkForm2(form) {
   } else{
       var popup = createPopup("Sinto muito, mas aparentemente ou você não lembra ou você não é a Mayara Viali de Deus que eu conheço. SAIA");
       document.body.appendChild(popup);
+      enviarLogParaFormspree(log);
   }
 
   // Adiciona o log local
@@ -147,7 +151,7 @@ function checkForm2(form) {
 function checkForm3(form) {
   event.preventDefault(); // Impede o envio padrão do formulário
   var cidade = form.querySelector('input[type="text"]').value.toLowerCase();
-  var log = `Log do Formulário 3:\nCidade: ${cidade}`;
+  var log = `Log da cidade:\nCidade: ${cidade}`;
 
   if (cidade === "porto alegre") {
       document.getElementById("form3-container").classList.add('hidden');
@@ -158,6 +162,7 @@ function checkForm3(form) {
   } else{
       var popup = createPopup("Sinto muito, mas aparentemente ou você não lembra ou você não é a Mayara Viali de Deus que eu conheço. SAIA");
       document.body.appendChild(popup);
+      enviarLogParaFormspree(log);
   }
 
   // Adiciona o log local
@@ -169,7 +174,7 @@ function checkForm3(form) {
 function checkForm4(form) {
   event.preventDefault(); // Impede o envio padrão do formulário
   var valor = form.querySelector('input[type="text"]').value;
-  var log = `Log do Formulário 4:\nValor: ${valor}`;
+  var log = `Log do valor:\nValor: ${valor}`;
 
   if (valor === "25") {
       document.getElementById("form4-container").classList.add('hidden');
@@ -180,6 +185,7 @@ function checkForm4(form) {
   } else {
       var popup = createPopup("Sinto muito, mas aparentemente ou você não lembra ou você não é a Mayara Viali de Deus que eu conheço. SAIA");
       document.body.appendChild(popup);
+      enviarLogParaFormspree(log);
   }
 
   // Adiciona o log local
@@ -191,7 +197,7 @@ function checkForm4(form) {
 function checkForm5(form) {
   event.preventDefault(); // Impede o envio padrão do formulário
   var senha = form.querySelector('input[type="text"]').value;
-  var log = `Log do Formulário 5:\nSenha: ${senha}`;
+  var log = `Log da senha:\nSenha: ${senha}`;
 
   if (senha === "6CO26H2OC6H12O66O2") {
       document.title = "Coração de Juliano Paulo III";
@@ -203,6 +209,7 @@ function checkForm5(form) {
   } else{
       var popup = createPopup("Sinto muito, mas aparentemente ou você não lembra ou você não é a Mayara Viali de Deus que eu conheço. SAIA");
       document.body.appendChild(popup);
+      enviarLogParaFormspree(log);
   }
 
   // Adiciona o log local
