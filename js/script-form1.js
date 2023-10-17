@@ -51,10 +51,10 @@
       form.parentElement.classList.add('hidden');
       form.parentElement.nextElementSibling.classList.remove('hidden');
     } else if (nome === "may" || nome === "mamay" || nome === "mayara") {
-      var popup = createPopup("Existem outras pessoas com esse mesmo nome, poderia especificar um pouco mais?");
+      var popup = createPopup1("Existem outras pessoas com esse mesmo nome, poderia especificar um pouco mais?");
       document.body.appendChild(popup);
     } else if(nome === "mayara viali"){
-      var popup = createPopup("Você só vai entrar com o nome completo, macaquinha 🙈");
+      var popup = createPopup2("Você só vai entrar com o nome completo, macaquinha 🙈");
       document.body.appendChild(popup);
     } else {
       var popup = createPopup("Este lugar não é destinado a você, por favor SAIA IMEDIATAMENTE");
@@ -130,13 +130,14 @@
     popup.classList.add('popup');
     popup.innerHTML = `
       <div class="popup-content">
+      <img class="imgaiming" src="img/me-aiming.png" alt="">
         <span class="close-popup" onclick="closePopup()">X</span>
         <p>${message}</p>
       </div>
     `;
     setTimeout(function() {
       document.body.removeChild(popup);
-    }, 5000);
+    }, 500000);
     return popup;
   }
   
@@ -147,4 +148,48 @@
     }
   }
 
+  function createPopup1(message) {
+    var popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.innerHTML = `
+      <div class="popup-content">
+      <img class="imgaiming" src="img/pensativo.png" alt="">
+        <span class="close-popup" onclick="closePopup()">X</span>
+        <p>${message}</p>
+      </div>
+    `;
+    setTimeout(function() {
+      document.body.removeChild(popup);
+    }, 500000);
+    return popup;
+  }
   
+  function closePopup() {
+    var popup = document.querySelector('.popup');
+    if (popup1) {
+      popup.parentNode.removeChild(popup);
+    }
+  }
+
+  function createPopup2(message) {
+    var popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.innerHTML = `
+      <div class="popup-content">
+      <img class="imgaiming" src="img/zoi.png" alt="">
+        <span class="close-popup" onclick="closePopup()">X</span>
+        <p>${message}</p>
+      </div>
+    `;
+    setTimeout(function() {
+      document.body.removeChild(popup);
+    }, 500000);
+    return popup;
+  }
+  
+  function closePopup() {
+    var popup = document.querySelector('.popup');
+    if (popup) {
+      popup.parentNode.removeChild(popup);
+    }
+  }
