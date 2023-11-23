@@ -1,245 +1,87 @@
 *{
-    padding: 0px;
-    margin: 15px;
-    box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body, html{
-    height: 100%;
-    margin: 0px;
-}
-
-body{
-  background-color: #950000;
-}
-
-.div-formularios-bg{
-   
-    height: 100%;
-/* 
-    background-image: url(../img/me-aiming.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-
-    background-size: 100% 101%; */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 label{
-    font-size: 23px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 1000px;
-    color: #ff9afb;
+    font-size: 17px;
 }
 
-input[type=submit]{
-  background-color: #823d95;
-    border-radius: 5px;
-    padding: 10px 20px;
-    border-width: 1px;
-    border-color: #650095;
-    color: #fbfbfb;
-    border: 1px solid #8f46bd;
-    margin-top: 11px;
-    margin-bottom: 30px;
+.red{
+    color: red;
+}
+  
+h2{
+    margin: 10px;
 }
 
-input[type=text], input[type=text], select{
-  width: 80%;
-  padding: 8px 13px;
-  text-align: center;
-  margin: 20px 0;
-  display: inline-block;
-  border: 1px solid #cccccc1a;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #191c29;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+h1{
+    margin: 20px;
+}
+/* Estilo adicional para o conteúdo específico de cada página */
+  
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
 }
 
-input[type=submit]:hover{
-  cursor: pointer;
+.emoticon{
+    width: 250px;
 }
 
-form{
-    max-width: 1000px;
-    margin: auto;
+a {
+    text-decoration: none;
+    color: #007bff;
 }
 
-.form-container {
-    /* max-width: 400px;
-    background-color: rgb(255, 255, 255);
-    display: block;
+.question, #questionForm{
     text-align: center;
-    margin: auto;
-    border-radius: 5px;
-    padding: 0px 0px 20px 0px;
-    position: sticky;
-    top: 18%; */
-
-    background: #191c29;
-  max-width: 400px;
-
-  position: relative;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1.5em;
-  color: rgb(88 199 250 / 0%);
-  font-family: cursive;
-  }
-  
-  .form-container::before{
-    content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate)
-    , #cc00ff, #ffffff 43%, #8c00ff);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-  }
-
-  .form-container::after{
-    position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate)
-    , #cc00ff, #ffffff 43%, #8c00ff);
-    opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      --rotate: 0deg;
-    }
-    100% {
-      --rotate: 360deg;
-    }
-  }
-
-  .hidden {
-    display: none;
-  }
-  
-.close-popup:hover{
-    cursor: pointer;
 }
 
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #212534;
-    border: 1px solid #33394f;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    max-width: 300px;
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-  }
-  
-  .popup-content {
-    position: relative;
-    padding: 10px;
-  }
-  
-  .close-popup {
-    position: absolute;
-    top: -11%;
-    right: -7%;
-    cursor: pointer;
-    padding: 5px;
-    color: #5e6a97;
-  }
+.question, #submitButton{
+    margin: 10px;
+}
 
-  .popup-content p{
-    margin: 0px;
-  }
-
-  .imgme{
-    max-width: 400px;
-    margin: 0px;
-    border-radius: 5px 5px 0px 0px;
-  }
-
-  .pinfo{
-    font-size: 13px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #c5c1c9bf;
-  }
-
-  @property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
-  }
-  
-  :root {
-    --card-height: 65vh;
-    --card-width: calc(var(--card-height) / 1.5);
-  }
-  
-  
-  body {
-    min-height: 100vh;
-    background: #212534;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
-  }
-
-  .imgaiming{
-    max-width: 188px;
-  }
-
-  .div-formularios-bg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .congrats{
-    width: 100%;
-    height: 100%;
-    /* background-image: url(../img/eu-tulipa.jpg); */
+#submitButton, .button{
     margin-top: 0px;
-    margin-bottom: 0px;
-    top: 0px;
-    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff1334;
+    background-color: #ff5151;
+    color: white;
+}
+
+.button{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 25px;
+}
+
+#submitButton:hover, .button:hover{
+    cursor: pointer;
+}
+
+.question, #questionForm, #submitButton {
     text-align: center;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Ajusta a duração da transição */
   }
 
-  .h1congrats{
-    color: #000000;
-    background-color: white;
-    max-width: fit-content;
-    padding: 10px;
-    position: absolute;
-    left: 10%;
-    right: 10%;
+  .green{
+    color: green;
+  }
+
+  #checklistForm input{
+    margin: 8px 0px;
+  }
+
+  #checklistForm{
+    margin-top: 15px;
   }
