@@ -19,7 +19,7 @@ function showNextMessage(index) {
             fadeIn(buttonContainer);
 
             if (index < messages.length) {
-                buttonContainer.innerHTML = `<button class="button" onclick="showNextMessage(${index + 1})">➝</button>`;
+                buttonContainer.innerHTML = `<button class="button" onclick="showNextMessage(${index + 1})">ok</button>`;
             } else {
                 if (index === messages.length && index !== 13) {
                     buttonContainer.innerHTML = ''; // Não há mais mensagens, limpar o contêiner de botões

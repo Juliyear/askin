@@ -4,18 +4,8 @@
   <meta charset="UTF-8">
   <meta name="author" content="Juliano Paulo">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style5.css">
-  <title>♥♥♥♥♡</title>
-</head>
-<body>
-  <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Juliano Paulo">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style6.css">
-  <title>♥♥♥♥♥</title>
+  <title>💔</title>
   <!-- Adicione aqui quaisquer outros meta tags, links para folhas de estilo, ou scripts que você precisar -->
   <style>
     body {
@@ -47,65 +37,18 @@
       height: auto;
     }
 
-    /* Adiciona transições de fade para os elementos h1 e img */
-    h1, img {
-      transition: opacity 1s ease-in-out;
-    }
-
-    /* Adiciona uma classe para ocultar os elementos */
-    .hidden {
-      display: none !important;
-    }
-
-    button{
-      padding-left: 50px;
-    padding-right: 50px;
-    margin: 25px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ff1334;
-    background-color: #ff5151;
-    color: white;
-    display: inline-block;
-  margin: 0 10px; /* Ajuste a margem conforme necessário */
-    }
-    button:hover{
-      cursor: pointer;
-    }
     *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.iso{
-  display: flex;
-  justify-content: center;
-}
   </style>
 </head>
 <body>
   <!-- Conteúdo do seu site começa aqui -->
   <div class="fade-container">
     <div class="fade-wrapper">
-      <h1 id="message1" class="hidden">ENTÃO, DONA <span class="red">MAYARA VIALI DE DEUS</span></h1><br>
-    <img id="image1" class="emoticon hidden" src="img/emoticon33.png" alt="">
-
-    <h1 id="message2" class="hidden">VOCÊ...</h1><br>
-    <img id="image2" class="emoticon hidden" src="img/emoticon2.png" alt="">
-
-    <h1 id="message3" class="hidden">ACEITARIA...</h1><br>
-    <img id="image3" class="emoticon hidden" src="img/emoticon6.png" alt="">
-
-    <h1 id="message4" class="hidden">NAMORAR <span class="red">COMIGO</span>?</h1><br>
-    <img id="image4" class="emoticon hidden" src="img/emoticon43.png" alt="">
-
-
-    <div class="iso">
-      
-<!-- Botões para "Sim", "Preciso de tempo para pensar" e "Não" -->
-<button id="btnSim" class="hidden" onclick="redirecionar('index7.html')">Sim</button>
-<button id="btnPensar" class="hidden" onclick="redirecionar('pensar.html')">Preciso de tempo para pensar</button>
-<button id="btnNao" class="hidden" onclick="redirecionar('nao.html')">Não</button>
-    </div>
+      <h1 id="message1" class="hidden">TADINHO!!! ELE ACHOU QUE DARIA <span class="red">CERTO</span> 👇</h1><br>
+    <img id="image1" class="emoticon hidden" src="img/tadinho.png" alt="">
 
     </div>
   </div>
@@ -113,7 +56,7 @@
     // Função para mostrar um conjunto por vez
     function showNextSet(index) {
       // Esconde todos os conjuntos
-      for (let i = 1; i <= 4; i++) {
+      for (let i = 1; i <= 11; i++) {
         document.getElementById(`message${i}`).classList.add('hidden');
         document.getElementById(`image${i}`).classList.add('hidden');
       }
@@ -129,7 +72,7 @@
       }, 100);
 
       // Agende a próxima chamada após 4 segundos
-      if (index < 4) {
+      if (index < 11) {
         setTimeout(() => {
           // Ativa o efeito de fade out
           document.getElementById(`message${index}`).style.opacity = '0';
@@ -157,10 +100,5 @@
     }
   </script>
   <!-- Conteúdo do seu site termina aqui -->
-</body>
-</html>
-
-
-  <script src="./js/script5.js"></script>
 </body>
 </html>

@@ -69,6 +69,10 @@ a {
     cursor: pointer;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .question, #questionForm, #submitButton {
     text-align: center;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Ajusta a duração da transição */
@@ -85,3 +89,14 @@ a {
   #checklistForm{
     margin-top: 15px;
   }
+
+
+
+.lowkey{
+    font-size: 20px;
+}
+
+.botaoaqui{
+    text-align: center;
+    margin: 20px;
+}
