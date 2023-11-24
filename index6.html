@@ -100,11 +100,8 @@
     <img id="image10" class="emoticon hidden" src="img/emoticon32.png" alt="">
 
     <h1 id="message11" class="hidden">BONUS- TODO MUNDO <span class="red">APOIA</span> NÓS DOIS COMO UM CASAL</h1><br>
-<video id="image11" width="640" height="360" controls class="hidden">
-    <source src="vid/teste.mov" type="video/mp4">
-    Seu navegador não suporta o elemento de vídeo.
-</video>
-<button id="redirectButton" class="hidden">PROSSEGUIR</button>
+    <iframe id="image11" class="hidden" width="560" height="315" src="https://www.youtube.com/embed/0ckKiWNsWZE?si=6tvBabHJFbmdA0u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <button id="redirectButton" class="hidden">PROSSEGUIR</button>
 
 
     </div>
@@ -126,6 +123,10 @@
       setTimeout(() => {
         document.getElementById(`message${index}`).style.opacity = '1';
         document.getElementById(`image${index}`).style.opacity = '1';
+        // Se for o conjunto 11, mostra o botão também
+        if (index === 11) {
+          document.getElementById('redirectButton').classList.remove('hidden');
+        }
       }, 100);
 
       // Agende a próxima chamada após 4 segundos
