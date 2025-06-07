@@ -2,7 +2,7 @@
 //           INSTRUÇÃO IMPORTANTE, JULIANO!
 // COLOQUE O ID DO VÍDEO DO YOUTUBE QUE VOCÊ QUER TOCAR AQUI
 // ==========================================================
-const YOUTUBE_VIDEO_ID = 'https://www.youtube.com/watch?v=z8hMnXeTcLw&pp=ygUacm9tYW50aWMgc29uZyB5b3UgbWFrZSBtZSA%3D';
+const YOUTUBE_VIDEO_ID = 'z8hMnXeTcLw';
 
 let player;
 
@@ -105,8 +105,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Botões
-    btnRecusar.addEventListener('click', () => alert("Ah... que pena. 😢 Se mudar de ideia, é só recarregar a página!"));
-    btnAceitar.addEventListener('click', () => { modal.classList.add('visivel'); playAudio(); });
+    btnRecusar.addEventListener('click', () => alert("Já entendi o recado... 😢 Se mudar de ideia, é só recarregar a página."));
+    // Botão "Aceito! 💕" abre o modal
+btnAceitar.addEventListener('click', () => {
+    // 1. Damos uma "cutucada" no player para carregar o áudio.
+    // Isso é crucial. Mesmo que o áudio não comece imediatamente,
+    // o navegador entende que a intenção de tocar começou COM o clique.
+    // Usamos `mute()` e `unMute()` para "acordar" o player sem fazer barulho.
+    if (player && typeof player.mute === 'function') {
+        player.mute();
+        player.unMute();
+    }
+    
+    // 2. Agora sim, mostramos o modal
+    modal.classList.add('visivel');
+
+    // 3. E pedimos para o áudio tocar.
+    // Como a "permissão" já foi dada pelo clique, agora deve funcionar.
+    playAudio();
+});
     btnSim.addEventListener('click', () => finalizarEscolha(true));
     btnNao.addEventListener('click', () => finalizarEscolha(false));
 
