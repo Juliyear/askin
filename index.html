@@ -42,13 +42,12 @@
         </footer>
 
         <!-- ===== NOVA SEÇÃO PARA O RESULTADO FINAL ===== -->
-        <!-- Ela começa escondida e só aparece depois da resposta final -->
         <div id="resultado-final" class="resultado-final-container">
             <p id="texto-resultado"></p>
         </div>
     </div>
 
-    <!-- O Modal e o Player do YouTube não mudam -->
+    <!-- O Modal da surpresa não muda -->
     <div id="modal-surpresa" class="modal-overlay">
         <div class="modal-content">
             <h3>E que tal um 💦💦💦💦💦 depois? 👉👈</h3>
@@ -60,9 +59,11 @@
         </div>
     </div>
 
-    <div id="youtube-player"></div>
+    <!-- ===== ÁUDIO LOCAL ===== -->
+    <audio id="musica-fundo" src="songs/song.webm" loop></audio>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- ===== SCRIPT ===== -->
+    <!-- Removemos o script da API do YouTube -->
     <script src="js/script.js"></script>
 </body>
 </html>
