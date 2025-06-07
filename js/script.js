@@ -2,7 +2,7 @@
 //           INSTRUÇÃO IMPORTANTE, JULIANO!
 // COLOQUE O ID DO VÍDEO DO YOUTUBE QUE VOCÊ QUER TOCAR AQUI
 // ==========================================================
-const YOUTUBE_VIDEO_ID = 'COLOQUE_O_ID_DO_VIDEO_AQUI';
+const YOUTUBE_VIDEO_ID = 'https://www.youtube.com/watch?v=z8hMnXeTcLw&pp=ygUacm9tYW50aWMgc29uZyB5b3UgbWFrZSBtZSA%3D';
 
 let player;
 
@@ -44,12 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Monta a mensagem final
-        let mensagemFinal = `Nosso encontro está confirmado! ♡<br>Vamos assistir "<strong>${filme}</strong>"`;
+        let mensagemFinal = `Perfeito Momoooo 💕💕💕💕<br>Vamos assistir "<strong>${filme}</strong>"`;
         if (aceitouExtra) {
-            mensagemFinal += ", e o 'ge efi zinho' depois está mais do que aceito! 😉💦";
+            mensagemFinal += ", e o 💦💦💦💦💦 depois tá confirmado hein! 🥵💦";
             playAudio(); // Toca a música se o estado salvo diz que ela aceitou
         } else {
-            mensagemFinal += ".<br>O mais importante é o nosso tempo juntos. Te amo! ❤️";
+            mensagemFinal += ".<br>O mais importante é o nosso tempo juntos. Te amo ❤️";
             stopAudio();
         }
         
