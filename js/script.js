@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let mensagemFinal = `Perfeito Momoooo 💕💕💕💕<br>Vamos assistir "<strong>${filme}</strong>"`;
         if (aceitouExtra) {
             mensagemFinal += ", e o 💦💦💦💦💦 depois tá confirmado hein! 🥵💦";
+            mensagemFinal += "\nE por você ter aceitado o 💦, como incentivo por ser uma boa menina, você pode escolher alguma coisa pra eu comprar pra você comer no dia 🥗😋";
             playAudio(); // Toca a música se o estado salvo diz que ela aceitou
         } else {
             mensagemFinal += ".<br>O mais importante é o nosso tempo juntos. Te amo ❤️";
